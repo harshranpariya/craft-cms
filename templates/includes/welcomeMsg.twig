@@ -1,0 +1,5 @@
+{% if currentUser %}
+    <p>Welcome back, {{ currentUser.friendlyName }}!</p>
+{% else %}
+    <p>Welcome, guest! Please <a href="{{ url('admin/login') }}">log in</a>.</p>
+{% endif %}

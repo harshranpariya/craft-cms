@@ -1,0 +1,84 @@
+{% include "includes/layout.twig" %}
+    {% block content %}
+
+    <main class="container mt-5">
+    <div style="text-align:center">
+        {% include "includes/welcomeMsg.twig" %}
+    </div>
+    {# {{ siteName }} #}
+    {{ homepage.titleHeading }}
+    {{ homepage.richtext }}
+
+    {# {{$entries = Plugin::$plugin->entriesService->getAllEntriesFromSection('card');}} #}
+    <h1> Entries fetch using Craft.entries </h1>
+        {% set entriesDirect = craft.entries.section('card').all() %}
+        <div class="row">
+            {% for entry in entriesDirect %}
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ entry.title }}</h5>
+                            <p class="card-text">{{ entry.description }}</p> 
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <a href="test" > Fetch card data using Plugin </a>
+        {% if entries is defined %}
+            <h1> Entries fetch using plugin </h1>
+            <div class="row">
+                {% for entry in entries %}
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ entry.title }}</h5>
+                                <p class="card-text">{{ entry.description }}</p> 
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        <a href="/" > <- back </a>
+
+        {% endif %}
+
+        <h2> Custome Field section </h2>
+        {% set customfield = craft.entries.section('customFieldSection').all() %}
+        <div class="row">
+            {% for entry in customfield %}
+                    <div class="col-md-4 mb-3">
+                        <a href={{entry.url}}>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ entry.title }}</h5>
+                                    <p class="card-text">{{ entry.customfield }}</p> 
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+            {% endfor %}
+        </div>
+
+        <h2> Author section </h2>
+        {% set authorField = craft.entries.section('author').all() %}
+            {% for entry in authorField %}
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <a href={{entry.url}}>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ entry.title }}</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+    
+        <h2> Custom Twig extension </h2>
+        {{ "This text will convert into upper case"|to_upper }}
+
+    </main>
+    {% endblock %}

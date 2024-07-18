@@ -1,0 +1,59 @@
+fieldLayouts:
+  b8e2a386-154d-4f69-b1bc-dda5e6dbce15:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: 'Author Name'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 10df4c75-e808-45bd-9b44-29703b805e3b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f2875265-3d8d-4786-b3f3-3f11b2a6ddf9 # authorBio
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dcecb235-4711-4d17-9310-ab19792b06fd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b66bd28d-8fcc-4223-8f3e-7bd9b15c7dd8
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 93a97e86-5fb7-448e-b123-41a810c115f2 # Author
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

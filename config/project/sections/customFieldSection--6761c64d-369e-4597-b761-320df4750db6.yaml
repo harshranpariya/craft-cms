@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: customFieldSection
+name: 'Custom Field Section'
+propagationMethod: all
+siteSettings:
+  ccbc0ea7-9876-4b58-8dea-944edeeae7df: # craft-cms
+    enabledByDefault: true
+    hasUrls: true
+    template: customField.twig
+    uriFormat: 'custom/{slug}'
+type: channel

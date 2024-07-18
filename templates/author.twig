@@ -1,0 +1,17 @@
+{% include "includes/layout.twig" %}
+{% block content %}
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <a style="text-decoration:none;font-size:24px" href="/"> <-- </a>
+            Author Details
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{entry.title}}</h5>
+            <p class="card-text">{{entry.authorbio}}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+columnSuffix: jdjkhqom
+contentColumnType: text
+fieldGroup: ba543b48-0a3a-43cb-8f98-47018d64def7 # Common
+handle: authorbio
+instructions: null
+name: authorBio
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: 94bcec18-e515-40d9-8d7a-ed73b9849ce7 # Simple
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

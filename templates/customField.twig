@@ -1,0 +1,15 @@
+{% include "includes/layout.twig" %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ entry.title }}</h5>
+                    <p class="card-text">{{ entry.customfield }}</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

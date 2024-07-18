@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: false
+handle: card
+name: Card
+propagationMethod: all
+siteSettings:
+  ccbc0ea7-9876-4b58-8dea-944edeeae7df: # craft-cms
+    enabledByDefault: true
+    hasUrls: true
+    template: card/_entry
+    uriFormat: 'card/{slug}'
+type: channel

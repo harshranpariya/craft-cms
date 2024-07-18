@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: false
+handle: homepage
+name: Homepage
+propagationMethod: all
+siteSettings:
+  ccbc0ea7-9876-4b58-8dea-944edeeae7df: # craft-cms
+    enabledByDefault: true
+    hasUrls: true
+    template: index.twig
+    uriFormat: __home__
+type: single
