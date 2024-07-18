@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Question 9.1 </h1>
+            <div id="example">Hello, world!</div>
+        </section>
+        <section>
+            <h1>Question 9.2 </h1>
+            <div class="highlight">First Element</div>
+            <div class="highlight">Second Element</div>
+            <div class="highlight">Third Element</div>
+        </section>
+        <section>
+            <h1>Question 10 </h1>
+            <button id="myButton">Click me!</button>
+        </section>
+        <section>
+            <h1>Advance Question </h1>
+            <ul id="navMenu">
+                <li class="menuItem">Home</li>
+                <li class="menuItem">About</li>
+                <li class="menuItem">Services</li>
+                <li class="menuItem">Contact</li>
+            </ul>
+        </section>
+
+    </main>
+    <script>
+        // Question 9.1
+        var element = document.getElementById("example");
+        element.textContent = "New content!";
+        // Question 9.2
+        var elements = document.querySelectorAll(".highlight");
+        elements.forEach(function(element, index) {
+            element.textContent = "Updated content " + (index + 1);
+        });
+        // Question 9.3
+        var button = document.getElementById('myButton');
+        button.addEventListener('click', function() {
+            // Check the current text of the button and update it
+            if (button.textContent === 'Click me!') {
+                button.textContent = 'Clicked!';
+            } else {
+                button.textContent = 'Click me!';
+            }
+        });
+        // Advance Question
+        // Get the parent element
+        var menu = document.getElementById('navMenu');
+        menu.addEventListener('click', function(event) {
+            // Check if the clicked element is a menu item
+            if (event.target.classList.contains('menuItem')) {
+                alert('Menu item clicked:'+event.target.textContent);
+            }
+        });
+    </script>
+</body>
+</html>
